@@ -1,0 +1,218 @@
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400');
+
+html {
+    background-color:#99102f;
+}
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+    color: #000000;
+}
+
+main,
+footer {
+    width: 60%;
+    margin: auto;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+footer {
+    margin-bottom: 36px;
+}
+
+h1,
+h2 {
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 2.825em;
+    color: white;
+    line-height: 1.2;
+    display: inline;
+
+    width: 720px;
+    transition: 0.2s;
+
+    background: #00000063;
+}
+
+h2 {
+    font-size: 2.125em;
+}
+
+h3 {
+    font-size: 1.125em;
+    margin: 24px 0;
+}
+
+label {
+    font-size: 1.125em;
+}
+
+textarea,
+input,
+select,
+label {
+    color: #000000;
+}
+
+input {
+    margin: 6px 0;
+}
+
+input[type=text] {
+    margin: 24px 0;
+    display: block;
+    width: 320px;
+    padding: 6px;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+input[type=text],
+textarea,
+select {
+    width: 320px;
+    padding: 6px;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    display: inline-block;
+    width: calc((320px / 2) - 3px);
+    cursor: pointer;
+    outline: none;
+
+    padding: 12px;
+
+    border-radius: 6px;
+    border: none;
+
+    color: white;
+    background-color: #2E3138;
+
+    transition: 0.2s;
+}
+
+input[type=radio]:checked + label,
+input[type=checkbox]:checked + label { 
+    font-weight: bold; 
+} 
+
+input[type=back] {
+    background-color: #6C6F7D;
+}
+
+input[type=submit] {
+    margin-right: 12px;
+}
+
+input[type=submit]:hover,
+input[type=submit]:focus {
+    background-color: #6c6f7d5d;
+    transition: 0.2s;
+}
+
+
+a.header__link {
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+a.header__link:hover h1 {
+    background: #232323a9;
+
+    -moz-box-shadow: -6px -4px 1px 0px #2323232e, 2px 0px 0px #2323232e;
+    -webkit-box-shadow: -6px -4px 1px 0px #2323232e, 2px 0px 0px #2323232e;
+    box-shadow: -6px -4px 1px 0px #2323232e, 2px 0px 0px #2323232e;
+
+    transition: 0.2s;
+}
+
+.header {
+    height: 60vh;
+    position: relative;
+    background-image: url(../assets/Ottawa_1.png);
+    background-position: center;
+    background-size: cover;
+
+    -moz-box-shadow: inset 0 -22px 114px 6px #000000;
+    -webkit-box-shadow: inset 0 -22px 114px 6px #000000;
+    box-shadow: inset 0 -22px 114px 6px #000000;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: calc(33.33% / 2);
+    background: none;
+    display: inline-block;
+
+    margin: 24px;
+    width: 720px;
+}
+
+.form {
+    margin: 24px 6px;
+}
+
+.survey--item {
+    margin: 24px 0 24px 12px
+}
+
+span.signature {
+    margin-top: 48px;
+    margin-left: 12px;
+    color: #6C6F7D;
+}
+
+span.signature > a {
+    text-decoration: none;
+}
+span.signature > a:hover {
+    color: white;
+    background: #232323a9;
+
+    -moz-box-shadow: -6px -4px 1px 0px #2323232e, 2px 0px 0px #2323232e;
+    -webkit-box-shadow: -6px -4px 1px 0px #2323232e, 2px 0px 0px #2323232e;
+    box-shadow: -3px -2px 1px 0px #2323232e, 1px 0px 0px #2323232e;
+
+    transition: 0.2s;
+}
+
+@media only screen and (max-width: 768px) {
+    footer,
+    main {
+        width: 80%;
+    }
+
+    .overlay {
+        width: 320px;
+        left: 0;
+    }
+
+    input[type=submit],
+    input[type=text],
+    select,
+    textarea {
+        width: 100%;
+    }
+
+    input[type=submit] {
+        margin: 0;
+    }
+}
