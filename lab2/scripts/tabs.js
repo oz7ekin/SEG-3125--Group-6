@@ -1,5 +1,5 @@
 function selectTab(tabIndex) {
-    //Hide All Tabs
+    //Hide Tabs
     document.getElementById('content1').style.display="none";
     document.getElementById('content2').style.display="none";
     document.getElementById('content3').style.display="none";
