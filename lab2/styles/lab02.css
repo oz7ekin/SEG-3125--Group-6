@@ -16,7 +16,7 @@ button {
 footer {
     position: block;
     bottom: 0;
-    background-color: #121213;
+    /* background-color: #121213; */
     grid-column: span 12;
     margin-top: 1rem;
     padding-top: 1rem;
