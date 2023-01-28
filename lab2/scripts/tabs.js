@@ -10,7 +10,7 @@ function selectTab(tabIndex) {
 
 
 
-function openInfo(evt, tabName) {
+function openInfo(d, tabName) {
 
 	tabcontent = document.getElementsByClassName("tabcontent");
 	for (i = 0; i < tabcontent.length; i++) {
@@ -23,18 +23,18 @@ function openInfo(evt, tabName) {
 	}
 
 	document.getElementById(tabName).style.display = "block";
-	evt.currentTarget.className += " active";
+	d.currentTarget.className += " active";
 
 }
 
 
-function populateListProductChoices(slct1, slct2) {
-    var s1 = document.getElementById(slct1);
-    var s2 = document.getElementById(slct2);
+function populateListProductChoices(a, b) {
+    var m = document.getElementById(a);
+    var n = document.getElementById(b);
 
-    s2.innerHTML = "";
+    n.innerHTML = "";
 
-    var optionArray = restrictListProducts(products, s1.value);
+    var optionArray = restrictListProducts(products, m.value);
 
 		
 	for (i = 0; i < optionArray.length; i++) {
@@ -44,126 +44,150 @@ function populateListProductChoices(slct1, slct2) {
 		checkbox.type = "checkbox";
 		checkbox.name = "product";
 		checkbox.value = productName;
-		s2.appendChild(checkbox);
+		n.appendChild(checkbox);
 		
 		var label = document.createElement('label')
 		label.htmlFor = productName;
 		label.appendChild(document.createTextNode(productName));
-		s2.appendChild(label);
+		n.appendChild(label);
 		
-		s2.appendChild(document.createElement("br"));    
+		n.appendChild(document.createElement("br"));    
 	}
 }
 	
 
 function selectedItems(){
 	
-	var ele = document.getElementsByName("product");
+	var element = document.getElementsByName("product");
 	var chosenProducts = [];
 	
-	var c = document.getElementById('displayCart');
-	c.innerHTML = "";
+	var lst = document.getElementById('displayCart');
+	lst.innerHTML = "";
 	
-	var para = document.createElement("P");
-	para.innerHTML = "You selected : ";
-	para.appendChild(document.createElement("br"));
-	for (i = 0; i < ele.length; i++) { 
-		if (ele[i].checked) {
-			para.appendChild(document.createTextNode(ele[i].value));
-			para.appendChild(document.createElement("br"));
-			chosenProducts.push(ele[i].value);
+	var s = document.createElement("P");
+	s.innerHTML = "You selected : "+"\n";
+	s.appendChild(document.createElement("br"));
+	for (i = 0; i < element.length; i++) { 
+		if (element[i].checked) {
+			s.appendChild(document.createTextNode(element[i].value));
+			s.appendChild(document.createElement("br"));
+			chosenProducts.push(element[i].value);
 		}
 	}
 		
-	c.appendChild(para);
-	c.appendChild(document.createTextNode("Total Price is $" + getTotalPrice(chosenProducts)+" Thanks for your visiting, See you next time!"));
+	lst.appendChild(s);
+	lst.appendChild(document.createTextNode("Total Price is $" + getTotalPrice(chosenProducts)+" Thanks for your visiting, See you next time!"));
 }
 
 var products = [
 	{
+		name: "bottlewater $1.00/bottle",
+		vegetarian: true,
+		FitnessFood: true,
+		Seafood:false,
+		GlutenFree: true,
+		Organic: false,
+		price: 1.00
+	},
+	{
+		name: "springwater $1.50/bottle",
+		vegetarian: true,
+		FitnessFood: true,
+		Seafood:false,
+		GlutenFree:true,
+		Organic: false,
+		price: 1.50
+	},
+	{
 		name: "potato $1.99/lb",
 		vegetarian: true,
 		FitnessFood: false,
-    Seafood: false,
+		Seafood: false,
+		GlutenFree: true,
+		Organic: true,
 		price: 1.99
+	},
+	{
+		name: "chocolate $2.00/bar",
+		vegetarian: true,
+		FitnessFood: false,
+		Seafood:false,
+		GlutenFree:true,
+		Organic: false,
+		price: 2.00
+	},
+	{
+		name: "icecream $3.50/box",
+		vegetarian: false,
+		FitnessFood: false,
+		Seafood:false,
+		GlutenFree:true,
+		Organic: false,
+		price: 3.50
 	},
 	{
 		name: "bread $4.35/bag",
 		vegetarian: true,
 		FitnessFood: false,
-    Seafood: false,
+		Seafood: false,
+		GlutenFree: false,
+		Organic: false,
 		price: 4.35
+	},
+	{
+		name: "chickbreast $5.00/lb",
+		vegetarian: false,
+		FitnessFood: true,
+		Seafood:false,
+		GlutenFree:true,
+		Organic: false,
+		price: 5.00
+	},
+	{
+		name: "Beef $11.00/lb",
+		vegetarian: false,
+		FitnessFood: false,
+		Seafood:false,
+		GlutenFree:true,
+		Organic: true,
+		price: 11.00
+	}
+  ,
+  {
+	name: "porkbone $12.00/lb",
+	vegetarian: false,
+	FitnessFood: false,
+	Seafood:false,
+	GlutenFree:true,
+	Organic: false,
+	price: 12.00
+},
+  {
+		name: "rice 18.00/bag(8kg)",
+		vegetarian: true,
+		FitnessFood: false,
+		Seafood:false,
+		GlutenFree:true,
+		Organic: true,
+		price: 18.00
 	},
 	{
 		name: "salmon $21.5/lb",
 		vegetarian: false,
 		FitnessFood: false,
-    Seafood:true,
+		Seafood:true,
+		GlutenFree:true,
+		Organic: true,
 		price: 21.50
-	},
-  {
-		name: "chickbreast $5.00/lb",
-		vegetarian: false,
-		FitnessFood: true,
-    Seafood:false,
-		price: 5.00
-	},
-  {
-		name: "bottlewater $1.00/bottle",
-		vegetarian: true,
-		FitnessFood: true,
-    Seafood:false,
-		price: 1.00
-	},
-  {
-		name: "icecream $3.50/box",
-		vegetarian: false,
-		FitnessFood: false,
-    Seafood:false,
-		price: 3.50
-	},
-  {
-		name: "Beef $11.00/lb",
-		vegetarian: false,
-		FitnessFood: false,
-    Seafood:false,
-		price: 11.00
-	}
-  ,
-  {
-		name: "chocolate $2.00/bar",
-		vegetarian: true,
-		FitnessFood: false,
-    Seafood:false,
-		price: 2.00
 	},
   {
 		name: "icewine $30.00/bottle",
 		vegetarian: true,
 		FitnessFood: false,
-    Seafood:false,
+		Seafood:false,
+		GlutenFree:true,
+		Organic: false,
 		price: 30.00
-	},
-  {
-		name: "springwater $1.50/bottle",
-		vegetarian: true,
-		FitnessFood: true,
-    Seafood:false,
-		price: 1.50
-	},
-  {
-		name: "rice 18.00/bag(8kg)",
-		vegetarian: true,
-		FitnessFood: false,
-    Seafood:false,
-		price: 18.00
-	},
-  {
-		name: "porkbone $12.00/lb",
-		vegetarian: false,
-		FitnessFood: false,
-    Seafood:false,
-		price: 12.00
 	}
 ];
 	
@@ -177,7 +201,13 @@ function restrictListProducts(prods, restriction) {
 		else if ((restriction == "FitnessFood") && (prods[i].FitnessFood == true)){
 			product_names.push(prods[i].name);
 		}
-    else if ((restriction == "Seafood") && (prods[i].Seafood == true)){
+		else if ((restriction == "Seafood") && (prods[i].Seafood == true)){
+			product_names.push(prods[i].name);
+		}
+		else if ((restriction == "GlutenFree") && (prods[i].GlutenFree == true)){
+			product_names.push(prods[i].name);
+		}
+		else if ((restriction == "Organic") && (prods[i].Organic == true)){
 			product_names.push(prods[i].name);
 		}
 		else if (restriction == "None"){
