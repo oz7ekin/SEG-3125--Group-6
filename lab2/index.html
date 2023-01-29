@@ -37,43 +37,48 @@
             <div id="content1" style= "font-size: 18px;">
                 <h2>Your Preference</h2>
                 <p>Please indicate your dietary preferences, then click products.</p>
-                <input type="radio" id="Vegetarian" value="Vegetarian" name="radio" class="larger" onchange="populateListProductChoices(this.id, 'displayProduct')">&nbsp&nbsp&nbspVegetarian <br><br>
-                <input type="radio" id="FitnessFood" value="FitnessFood" name="radio" class="larger" onchange="populateListProductChoices(this.id, 'displayProduct')">&nbsp&nbsp&nbspFitnessFood <br><br>
-                <input type="radio" id="Seafood" value="Seafood" name="radio" class="larger" onchange="populateListProductChoices(this.id, 'displayProduct')">&nbsp&nbsp&nbspSeafood <br><br>
-                <input type="radio" id="None" value="None" name="radio" class="larger" onchange="populateListProductChoices(this.id, 'displayProduct')">&nbsp&nbsp&nbspNone <br><br>
+                
+		<input type="radio" id="Vegetarian" value="Vegetarian" name="radio" class="larger" onchange="populateListProductChoices(this.id, 'displayProduct')">&nbsp&nbsp&nbspVegetarian <br><br>
+		<input type="radio" id="FitnessFood" value="FitnessFood" name="radio" class="larger" onchange="populateListProductChoices(this.id, 'displayProduct')">&nbsp&nbsp&nbspFitnessFood <br><br>
+        <input type="radio" id="Seafood" value="Seafood" name="radio" class="larger" onchange="populateListProductChoices(this.id, 'displayProduct')">&nbsp&nbsp&nbspSeafood <br><br>
+        <input type="radio" id="GlutenFree" value="GlutenFree" name="radio" class="larger" onchange="populateListProductChoices(this.id, 'displayProduct')">&nbsp&nbsp&nbspGlutenFree <br><br>
+		<input type="radio" id="Organic" value="Organic" name="radio" class="larger" onchange="populateListProductChoices(this.id, 'displayProduct')">&nbsp&nbsp&nbspOrganic <br><br>
+        <input type="radio" id="None" value="None" name="radio" class="larger" onchange="populateListProductChoices(this.id, 'displayProduct')">&nbsp&nbsp&nbspNone <br><br>
+
+
+        
 
             </div>
 
             <div id="content2" class="user">
-
-                <h2>Products</h2>
-                <p>Here are your available products based on your preferences.</p>
-                <div id="Products" class="tabcontent">
-                    <h3>Your targeted products</h3>
-                    <p>We preselected products based on your restrictions.</p>
-                       Choose items to buy:
+                <div id="Products" class="tabcontent" style="font-size: large;">
+                    <h2>Products</h2>
+                    <p>Here are your available products based on your preferences.</p>
+                    <h3>Your targeted products:</h3>
                        <div id="displayProduct"></div> <br> <br>
                        <button id="addCart" type="button" class="navigation-button" onclick="selectedItems()"> 
-                          Add selected items to cart.
+                          Add to cart.
                       </button>
                   </div>
             </div>
 
             <div id="content3" class="user" style= "font-size: 18px;">
-                <div id="Cart" class="tabcontent">
-                    <h3>Cart</h3>
+                <div id="Cart" class="tabcontent" style="font-size: large;">
+                    <h2>Cart</h2>
                     <p>Here is your cart.</p>
                     <div id="displayCart"></div>
                   </div>
             </div>       
         </div>
 
-        <footer style="position:absolute;bottom:30px; text-align: center; font-size: 20px;">
-            Website designed by <a href="https://github.com/oz7ekin/oz7ekin.github.io"> SEG 3125 Group 6</a>  
-        </footer>
-    </div>
+    <footer style="position:absolute;bottom:30px; text-align: center; font-size: 20px;">
+        Website designed by <a href="https://github.com/oz7ekin/oz7ekin.github.io"> SEG 3125 Group 6</a>  
+    </footer>
+</div>
 
-    <script type="text/javascript" src="scripts/tabs.js"></script>
+  
+
+<script type="text/javascript" src="scripts/tabs.js"></script>
 
 </body>
 
