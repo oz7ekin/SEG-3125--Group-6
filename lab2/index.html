@@ -23,7 +23,7 @@
 
         <div class="menu">
             <div class="navigation-button" onclick="selectTab(1);">
-                <p>Client Preference</p>
+                <p style="text-align: center;">Client Preference</p>
             </div>
             <div id="productsTab" class="navigation-button" onclick="selectTab(2);">
                 <p>Products</p>
@@ -37,6 +37,7 @@
             <div id="content1" style= "font-size: 18px;">
                 <h2>Your Preference</h2>
                 <p>Please indicate your dietary preferences, then click products.</p>
+                
 		<input type="radio" id="Vegetarian" value="Vegetarian" name="radio" class="larger" onchange="populateListProductChoices(this.id, 'displayProduct')">&nbsp&nbsp&nbspVegetarian <br><br>
 		<input type="radio" id="FitnessFood" value="FitnessFood" name="radio" class="larger" onchange="populateListProductChoices(this.id, 'displayProduct')">&nbsp&nbsp&nbspFitnessFood <br><br>
         <input type="radio" id="Seafood" value="Seafood" name="radio" class="larger" onchange="populateListProductChoices(this.id, 'displayProduct')">&nbsp&nbsp&nbspSeafood <br><br>
@@ -44,6 +45,8 @@
 		<input type="radio" id="Organic" value="Organic" name="radio" class="larger" onchange="populateListProductChoices(this.id, 'displayProduct')">&nbsp&nbsp&nbspOrganic <br><br>
         <input type="radio" id="None" value="None" name="radio" class="larger" onchange="populateListProductChoices(this.id, 'displayProduct')">&nbsp&nbsp&nbspNone <br><br>
 
+
+        
 
             </div>
 
@@ -66,12 +69,14 @@
                     <div id="displayCart"></div>
                   </div>
             </div>       
-    </div>
+        </div>
 
     <footer style="position:absolute;bottom:30px; text-align: center; font-size: 20px;">
         Website designed by <a href="https://github.com/oz7ekin/oz7ekin.github.io"> SEG 3125 Group 6</a>  
     </footer>
 </div>
+
+  
 
 <script type="text/javascript" src="scripts/tabs.js"></script>
 
