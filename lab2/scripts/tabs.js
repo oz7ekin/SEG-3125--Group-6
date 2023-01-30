@@ -35,6 +35,7 @@ function populateListProductChoices(a, b) {
     n.innerHTML = "";
 
     var optionArray = restrictListProducts(products, m.value);
+	var optionArray2 = restrictListProducts2(products, m.value);
 
 		
 	for (i = 0; i < optionArray.length; i++) {
@@ -50,6 +51,13 @@ function populateListProductChoices(a, b) {
 		label.htmlFor = productName;
 		label.appendChild(document.createTextNode(productName));
 		n.appendChild(label);
+
+		var productPrice = optionArray2[i];
+		var checkbox2 = document.createElement("output");
+		checkbox2.type = "label";
+		checkbox2.name = "productPrice";
+		checkbox2.value = "       $"+productPrice;
+		n.appendChild(checkbox2);
 		
 		n.appendChild(document.createElement("br"));    
 	}
@@ -59,17 +67,20 @@ function populateListProductChoices(a, b) {
 function selectedItems(){
 	
 	var element = document.getElementsByName("product");
+	var price = document.getElementsByName("productPrice");
 	var chosenProducts = [];
 	
 	var lst = document.getElementById('displayCart');
 	lst.innerHTML = "";
 	
 	var s = document.createElement("P");
-	s.innerHTML = "You selected : "+"\n";
+	s.innerHTML = "You selected : ";
 	s.appendChild(document.createElement("br"));
 	for (i = 0; i < element.length; i++) { 
 		if (element[i].checked) {
 			s.appendChild(document.createTextNode(element[i].value));
+			s.appendChild(document.createTextNode("   $"));
+			s.appendChild(document.createTextNode(price[i].value));
 			s.appendChild(document.createElement("br"));
 			chosenProducts.push(element[i].value);
 		}
@@ -81,7 +92,7 @@ function selectedItems(){
 
 var products = [
 	{
-		name: "bottlewater $1.00/bottle",
+		name: "bottlewater",
 		vegetarian: true,
 		FitnessFood: true,
 		Seafood:false,
@@ -90,7 +101,7 @@ var products = [
 		price: 1.00
 	},
 	{
-		name: "springwater $1.50/bottle",
+		name: "springwater",
 		vegetarian: true,
 		FitnessFood: true,
 		Seafood:false,
@@ -99,7 +110,7 @@ var products = [
 		price: 1.50
 	},
 	{
-		name: "potato $1.99/lb",
+		name: "potato",
 		vegetarian: true,
 		FitnessFood: false,
 		Seafood: false,
@@ -108,7 +119,7 @@ var products = [
 		price: 1.99
 	},
 	{
-		name: "chocolate $2.00/bar",
+		name: "chocolater",
 		vegetarian: true,
 		FitnessFood: false,
 		Seafood:false,
@@ -117,7 +128,7 @@ var products = [
 		price: 2.00
 	},
 	{
-		name: "icecream $3.50/box",
+		name: "icecream",
 		vegetarian: false,
 		FitnessFood: false,
 		Seafood:false,
@@ -126,7 +137,7 @@ var products = [
 		price: 3.50
 	},
 	{
-		name: "bread $4.35/bag",
+		name: "bread",
 		vegetarian: true,
 		FitnessFood: false,
 		Seafood: false,
@@ -135,7 +146,7 @@ var products = [
 		price: 4.35
 	},
 	{
-		name: "chickbreast $5.00/lb",
+		name: "chickbreast",
 		vegetarian: false,
 		FitnessFood: true,
 		Seafood:false,
@@ -144,7 +155,7 @@ var products = [
 		price: 5.00
 	},
 	{
-		name: "Beef $11.00/lb",
+		name: "Beef",
 		vegetarian: false,
 		FitnessFood: false,
 		Seafood:false,
@@ -154,7 +165,7 @@ var products = [
 	}
   ,
   {
-	name: "porkbone $12.00/lb",
+	name: "porkbone",
 	vegetarian: false,
 	FitnessFood: false,
 	Seafood:false,
@@ -163,7 +174,7 @@ var products = [
 	price: 12.00
 },
   {
-		name: "rice 18.00/bag(8kg)",
+		name: "rice)",
 		vegetarian: true,
 		FitnessFood: false,
 		Seafood:false,
@@ -172,7 +183,7 @@ var products = [
 		price: 18.00
 	},
 	{
-		name: "salmon $21.5/lb",
+		name: "salmon",
 		vegetarian: false,
 		FitnessFood: false,
 		Seafood:true,
@@ -181,7 +192,7 @@ var products = [
 		price: 21.50
 	},
   {
-		name: "icewine $30.00/bottle",
+		name: "icewine",
 		vegetarian: true,
 		FitnessFood: false,
 		Seafood:false,
@@ -194,6 +205,7 @@ var products = [
 
 function restrictListProducts(prods, restriction) {
 	let product_names = [];
+	let product_price = [];
 	for (let i=0; i<prods.length; i+=1) {
 		if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)){
 			product_names.push(prods[i].name);
@@ -215,6 +227,31 @@ function restrictListProducts(prods, restriction) {
 		}
 	}
 	return product_names;
+}
+
+function restrictListProducts2(prods, restriction) {
+	let product_price = [];
+	for (let i=0; i<prods.length; i+=1) {
+		if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)){
+			product_price.push(prods[i].price);
+		}
+		else if ((restriction == "FitnessFood") && (prods[i].FitnessFood == true)){
+			product_price.push(prods[i].price);
+		}
+		else if ((restriction == "Seafood") && (prods[i].Seafood == true)){
+			product_price.push(prods[i].price);
+		}
+		else if ((restriction == "GlutenFree") && (prods[i].GlutenFree == true)){
+			product_price.push(prods[i].price);
+		}
+		else if ((restriction == "Organic") && (prods[i].Organic == true)){
+			product_price.push(prods[i].price);
+		}
+		else if (restriction == "None"){
+			product_price.push(prods[i].price);
+		}
+}
+return product_price;
 }
 
 function getTotalPrice(chosenProducts) {
