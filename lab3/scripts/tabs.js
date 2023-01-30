@@ -88,7 +88,11 @@ function selectedItems(){
 		
 	lst.appendChild(s);	
 	lst.appendChild(document.createTextNode("Total Price is $" + getTotalPrice(chosenProducts)));
+	
 	document.getElementById("confirmMessage").style.display = "block";
+	setTimeout(function() {
+		document.getElementById("confirmMessage").style.display = "none";
+	  }, 2000);
 
 }
 
@@ -269,5 +273,9 @@ function getTotalPrice(chosenProducts) {
 }
 function submit() {
 	document.getElementById("response").style.display = "block";
+	setTimeout(function() {
+		location.reload();
+	  }, 2200);
+
 	
   }
