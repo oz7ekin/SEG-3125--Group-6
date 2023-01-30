@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+  <link href="styles/accordion.css" rel="stylesheet" type="text/css">
+
+  <script src="scripts/accordion.js"></script>
+  <script src="scripts/tabs.js"></script>
+
+  <meta charset="UTF-8">
+
+  <title>Lab 3 - Group6</title>
+</head>
+
+  <body>
+    <main>
+    <h1>WELCOME TO MARKET 06</h1>
+
+    <button id="step-1" class="accordion">
+      <!-- Accordion 1 -->
+      <h2 style="color: white; display: inline;">Client Info</h2>
+    </button>
+    <div class="panel hidden">
+      <!-- Tab content -->
+      <div class="location">
+        <div class="survey--item">
+      <p>Name</p>
+          <label for="fname"></label>
+          <input type="text" id="fname" name="fname">
+      <p>City</p>
+        <label for="city" value="City" aria-hidden="true"></label>
+            <select name="City" id="City">
+                <option value="ottawa">Ottawa</option>
+                <option value="nepan">Nepean</option>
+                <option value="orleans">Orleans</option>
+                <option value="kanata">Kanata</option>
+                <option value="carleton">Carleton</option>
+                <option value="gatineau">Gatineau</option>
+                <option value="other">Other</option>
+              </select>
+        </div>
+      </div>
+      <p>Please indicate your dietary preferences</p>
+      <div class="survey--item displayProduct">
+        <input id="vegetarian" type="checkbox" name="dietSelect" value="Vegetarian" onchange="populateListProductChoices(this.id,'displayProduct')">
+        <label for="vegetarian">Vegetarian</label> <br/>
+        <input id="FitnessFood" type="checkbox" name="dietSelect" value="FitnessFood" onchange="populateListProductChoices(this.id,'displayProduct')" >
+        <label for="FitnessFood">Fitness Food</label> <br/>
+        <input id="glutenFree" type="checkbox" name="dietSelect" value="glutenFree" onchange="populateListProductChoices(this.id,'displayProduct')" >
+        <label for="glutenFree">Gluten Free</label> <br/>
+        <input id="organic" type="checkbox" name="dietSelect" value="organic" onchange="populateListProductChoices(this.id,'displayProduct')" >
+        <label for="organic">Organic</label><br/>
+        <input id="seafood" type="checkbox" name="dietSelect" value="seafood" onchange="populateListProductChoices(this.id,'displayProduct')" >
+        <label for="seafood">Seafood</label><br/>
+        <input id="none" type="checkbox" name="dietSelect" value="none" onchange="populateListProductChoices(this.id,'displayProduct')">
+        <label for="none">None</label><br/>
+          </div>
+          <br/>
+          
+    </div>
+    
+    <button id="step-2"class="accordion">
+      <!-- Accordion 2-->
+      <h2 style="color: white; display: inline;">Products</h2>
+    </button>
+    <div class="panel hidden">
+      <div id="Products">
+        <p>Here are your available products based on your preferences</p>
+        <div class="survey--item">
+          <div id="displayProduct">
+            <p>Nothing here yet!</p>
+          </div>
+        </div>
+        <div class="form--actions">
+          <button id="addCart" type="button" class="block" onclick="selectedItems()">
+            Add selected items to cart.
+          </button>
+        </div>
+        <div id="confirmMessage" style="display:none">Selected items have been added to cart.</div>
+       
+      </div>
+    </div>
+
+    <button id="step-3"class="accordion">
+
+      <!-- Accordion 3-->
+      <h2 style="color: white; display: inline;">Review</h2>
+    </button>
+    <div class="panel hidden">
+      <div id="Cart">
+        <p>Schedule a pickup time</p>
+        <div class="survey--item">
+          <input name="delivery" type="date">
+          <label aria-hidden="true" for="delivery" hidden>Schedule a pickup time</label>
+        </div>
+        <div class="cart">
+          <div id="displayCart">
+            <p>No products selected yet!</p>
+          </div>
+          <div class="cart--item" id="total">
+          </div>
+        </div>
+      </div>
+      <div class="form--actions">
+        <button onclick="submit()">Place your order</button>
+      </div>
+      <div id="response" style="display:none">
+        Your order has been placed. See you next time!
+      </div>
+    </div>
+  </main>
+    <footer>
+      <span class="signature">
+        Website designed by <a href="https://github.com/oz7ekin/oz7ekin.github.io">SEG 3125 Group 6</a>.
+      </span>
+    </footer>
+  </body>
+</html>
