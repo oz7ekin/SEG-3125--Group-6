@@ -99,7 +99,6 @@ function selectedItems(){
 	var element = document.getElementsByName("product");
 	var price = document.getElementsByName("productPrice");
 	var chosenProducts = [];
-	
 	var c = document.getElementById('displayCart');
 	c.innerHTML = "";
 	
