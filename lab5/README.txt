@@ -1,6 +1,6 @@
 This webpage is about barbershop. Made by Group 6 (Selim Oztekin, Amarachi Joseph, Tao Zhong)
 
-There are 4 nav selection buttons from top to four main sections of webpage(Service, Professionals, Booking and Contact)
+There are 4 nav selection buttons wtih icons from top to four main sections of webpage(Service, Professionals, Booking and Contact)
 
 1. Service: all the hairstyles and its price
 
