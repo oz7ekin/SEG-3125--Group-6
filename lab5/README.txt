@@ -1,6 +1,6 @@
 This webpage is about barbershop. Made by Group 6 (Selim Oztekin, Amarachi Joseph, Tao Zhong)
 
-There are 4 nav selection buttons from top(Service, Professionals, Booking and Contact)
+There are 4 nav selection buttons from top to four main sections of webpage(Service, Professionals, Booking and Contact)
 
 1. Service: all the hairstyles and its price
 
@@ -22,6 +22,8 @@ There are 4 nav selection buttons from top(Service, Professionals, Booking and C
 
     what slot should they fill in.
 
-4. Contact: address, email and phone number
+4. Contact: a message tool used to contact our shop.
 
-    These information will be shown at the bottom of the webpage.
+    This tool is at the bottom of the webpage. 
+
+    Customer is allowed to submit with out filling their name, but they shall provide the explaination of the problem and their email for contact.

@@ -98,3 +98,16 @@ function checkInput() {
         alert("Please enter a value in the inputService field");
       }
   }
+
+
+  function checkInput2() {
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
+
+    if (email == "") {
+        alert("please provide your email for contact");
+      }
+    if (message == "") {
+        alert("Please enter problems or suggestions");
+      }
+    }
