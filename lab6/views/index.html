@@ -3,56 +3,49 @@
   <title>LAB 6 GROUP 6</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
 
   <style>
     .myDiv {
-      text-align:center;
-      background-color: rgba(255, 255, 255, 0.8); /* Add transparency to the background color */
-    color: #333; /* Set a dark text color */
+      border: 5px outset rgb(15, 14, 14);
+      background-color: rgb(129, 129, 129);
+      text-align: center;
     }
     body {
-  background-color: rgb(248, 248, 248);
-  background-image: url("https://images.unsplash.com/photo-1528947120591-c0bf5c1e63fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1961&q=80");
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.8; 
-  
-}
-
-
+      background-color: rgb(248, 248, 248);
+        background-image: url("https://images.unsplash.com/photo-1528947120591-c0bf5c1e63fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1961&q=80");
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.8; 
+    }
 </style>
 
 </head>
-
 <div class="myDiv">
 
-
-<a href="https://www.uottawa.ca/en">
-</a><br>
-<br>
+</a>
 </div>
 
 <body>
-    <form name="Questionnaire">
+    <form name="UI Form">
       <div class="myDiv">
-        <h3>Please enter your name.</h3>
-        Name: <input type="text" name="program" required><br>
+        <h3>Please enter your name and name of the program you are in</h3>
+        Your Name&Program: <input type="text" name="program" required><br>
         <br>
       </div>
 
       <div class="myDiv">
-
-      <h3>Would you study at Uottawa.ca again?</h3>
-                    <div class="survey--item">
-                        <input type="radio" id="yn" name="yes" value="yes">
-                        <label for="yes">yes</label><br>
-                        <input type="radio" id="yn" name="no" value="no">
-                        <label for="no">no</label><br>
-                    </div>
+        <h3>Would you study at Uottawa.ca again?</h3>
+        <input type="radio" name="yn" value="Yes">Yes<br>
+        <input type="radio" name="yn" value="No">No<br>
+        <br>
+      </div>
 
       <div class="myDiv">
-        <h3>Please select what you like about uottawa.ca</h3>
+        <h3>Please check every characteristic that you like about uottawa.ca</h3>
         <input type="checkbox" name="characteristic" value="Proper-Functionality">Proper Functionality<br>
         <input type="checkbox" name="characteristic" value="Consistency">Consistency<br>
         <input type="checkbox" name="characteristic" value="Efficiency">Efficiency<br>
@@ -63,8 +56,8 @@
       </div>
 
       <div class="myDiv">
-        <h3>Is the uOttawa website better, worse, than other university websites in general? 
-</h3>
+        <h3>Compare uottawa.ca to other university websites
+        </h3>
         <select name="comparison"><br>
           <option value="Better">Better</option><br>
           <option value="Worse">Worse</option><br>
@@ -74,13 +67,7 @@
       </div>
 
       <div class="myDiv">
-        <h3>Other comments</h3>
-        <textarea name="comment" white-space="pre-wrap" rows="5" cols="30"></textarea><br>
-        <br>
-      </div>
-
-      <div class="myDiv">
-        <h3>The uOttawa website is easy to navigate:</h3>
+        <h3>The uOttawa website is easy to navigate</h3>
         Strongly Disagree<input type="radio" name="likert" value="Strongly Disagree">
         <input type="radio" name="likert" value="Disagree">
         <input type="radio" name="likert" value="Neutral">
@@ -90,15 +77,21 @@
       </div>
 
       <div class="myDiv">
+        <h3>Do you have any ideas to help improve the design of the webpage?</H3>
+        <textarea name="comment" white-space="pre-wrap" rows="5" cols="30"/></textarea><br>
+        <br>
+      </div>
+
+    
+
+      <div class="myDiv">
         <br>
         <button type="submit" class="btn btn-warning" id="bb">Submit</button>
       </div>
     </form>
-    <footer>
-      <span class="signature">
-        Website designed by <a href="https://github.com/oz7ekin/oz7ekin.github.io"> SEG 3125 Group 6</a>.
-    </span>
+    <footer>   
+      Website designed by <a href="https://github.com/oz7ekin/oz7ekin.github.io"> SEG 3125 Group 6</a>.
+    </footer>
     <script src="/assets/action.js"></script>
-</footer>
 </body>
 </html>

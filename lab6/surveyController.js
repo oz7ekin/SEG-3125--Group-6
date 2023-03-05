@@ -10,6 +10,7 @@ function readData(fileName){
     return infoRead;
 }
 
+// read the data file
 function writeData(info, fileName){
     data = JSON.stringify(info);
     fs.writeFileSync('./data/' + fileName + '.json', data);
@@ -31,10 +32,9 @@ function combineCounts(name, value){
     writeData(info, name);
 }
 
-
 module.exports = function(app){
 
-
+   
     app.get('/analysis', function(req, res){
         var characteristic = readData("characteristic");
         var comparison = readData("comparison");
@@ -46,7 +46,6 @@ module.exports = function(app){
         console.log([program, yn, characteristic, comparison, comment, likert]);
     });
 
-    
     app.get('/index', function(req, res){
         res.sendFile(__dirname+'/views/index.html');
     });
@@ -86,7 +85,6 @@ module.exports = function(app){
                 combineCounts(key, json[key]);
             }
         }
-   
         res.sendFile(__dirname + "/views/index.html");
     });
 
