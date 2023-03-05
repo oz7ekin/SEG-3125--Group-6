@@ -5,19 +5,19 @@
 
 <body>
     <h1>Survey analysis</h1>
-    <h2>Program</h2>
+    <h2>Name & Program</h2>
     <ul>
     <% for (var i=0; i<results[0].length; i++){ %>
         <li><%= results[0][i].program %> :  <%= results[0][i].count %></li>
     <% } %>
     </ul>
-    <h2>Would You Revisit Website</h2>
+    <h2>Would You study uottawa.ca again</h2>
     <ul>
     <% for (var i=0; i<results[1].length; i++){ %>
         <li><%= results[1][i].yn %> :  <%= results[1][i].count %></li>
     <% } %>
     </ul>
-    <h2>Characteristic</h2>
+    <h2>Likes</h2>
     <ul>
     <% for (var i=0; i<results[2].length; i++){ %>
         <li><%= results[2][i].characteristic %> :  <%= results[2][i].count %></li>
