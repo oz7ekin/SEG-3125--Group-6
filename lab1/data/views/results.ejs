@@ -1,0 +1,18 @@
+<h1>Survey Results</h1>
+<% allSurveys.forEach((survey) => { %>
+  <p>Name: <%= survey.name %></p>
+  <p>Email: <%= survey.email %></p>
+  <p>Occupation: <%= survey.occupation %></p>
+  <p>Highlight: <%= survey.highlight %></p>
+  <p>Dislikes:</p>
+  <ul>
+    <% survey.dislikes.forEach((dislike) => { %>
+      <li><%= dislike %></li>
+    <% }); %>
+  </ul>
+  <p>Other: <%= survey.other %></p>
+<% }); %>
+
+<div><a href="/survey/results">View Survey Results</a></div>
+
+
