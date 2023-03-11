@@ -4,16 +4,9 @@ These websites are created using HTML, CSS, and JavaScript,
 and are designed to showcase different aspects of user interface design and usability testing.
 
 To view websites: 
-- Lab1
-- Lab2
-- Lab3
-- Lab4
-- Lab5
-
-
-[Lab1](https://oz7ekin.github.io/lab1/index.html
-[Lab2](https://oz7ekin.github.io/lab2/index.html
-[Lab3](https://oz7ekin.github.io/lab3/index.html
-[Lab4](https://oz7ekin.github.io/lab4/index.html
-[Lab5](https://oz7ekin.github.io/lab5/index.html
+-[Lab1](https://oz7ekin.github.io/lab1/index.html)
+-[Lab2](https://oz7ekin.github.io/lab2/index.html)
+-[Lab3](https://oz7ekin.github.io/lab3/index.html)
+-[Lab4](https://oz7ekin.github.io/lab4/index.html)
+-[Lab5](https://oz7ekin.github.io/lab5/index.html)
 
