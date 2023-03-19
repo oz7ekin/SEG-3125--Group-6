@@ -1,0 +1,6 @@
+.required:after {
+    content: "*";
+    padding-left: 0.15rem;
+    font-weight: bold;
+    color: #ff0000;
+}
