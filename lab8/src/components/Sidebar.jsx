@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Form } from "react-bootstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  faArrowsAltV as arrows, faTags as price, faStarHalfAlt as rating, faAward as quality, faMobileAlt as phone, faTabletAlt as tablet, faLaptop as laptop } from '@fortawesome/free-solid-svg-icons';
+import {  faArrowsAltV as arrows, faTags as price, faStarHalfAlt as rating, faAward as quality, faMobileAlt as phone, faTabletAlt as tablet, faLaptop as laptop, faHome } from '@fortawesome/free-solid-svg-icons';
 import { faClock as watch } from '@fortawesome/free-regular-svg-icons';
 import { faDollarSign } from '@fortawesome/free-solid-svg-icons';
 
@@ -37,6 +37,11 @@ export default function Sidebar(props) {
             <div className="pt-4 px-4 mb-5">
                 <div className="py-2">
                     <div className="d-grid gap-2">
+                    <Button className="rounded-pill p-0 fs-5" variant="light" onClick={() => { window.location.href = "https://oz7ekin.github.io/lab8/index.html" }}>
+    <FontAwesomeIcon className="me-1" icon={faHome} /> Home
+</Button>
+
+
                        
                         <Button className="rounded-pill p-0 fs-5" variant="light" onClick={() => { props.setCategory("iPhone") }}>
                             <FontAwesomeIcon className="me-1" icon={phone} /> Phones
