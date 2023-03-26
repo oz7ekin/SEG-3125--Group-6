@@ -17,7 +17,7 @@
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-danger text-white">
     <div class="container-lg">
-            <div class="d-inline-flex header">
+            <div class="d-inline-flex header" id="home">
                 <img src="assets/logo-white.png" width="120" height="120" alt="logo" class="me-4 align-self-center">
                 <h1 class="my-4 center align-self-center">Tech|Shop 06</h1>
             </div>
@@ -26,16 +26,13 @@
     
         <ul class="navbar-nav text-white-100">
             <li class="nav-item">
-                <a class="nav-link" href="#home"><i class="bi-house-exclamation"></i>Home</a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link" href="#shop" onclick="window.location.replace('http://localhost:3000/LAB8')">
                   <i class="bi-shop"></i>Shop
                 </a>
               </li>
               
             <li class="nav-item">
-                <a class="nav-link" href="#About Us"><i class="bi-activity"></i>About Us</a>
+                <a class="nav-link" href="#sales"><i class="bi-activity"></i>Sales</a>
             </li>
                 
             <li class="nav-item">
@@ -59,8 +56,8 @@
     <main>
 
 
-        <div class="container-lg" id="shop">
-            <h2 class="my-4"> Special Price</h2>
+        <div class="container-lg">
+            <h2 class="my-4"  id="sales"> Special Price</h2>
             <div class="accordion container-sm accordion-flush" id="accordionFlushExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-headingTwo">
@@ -278,7 +275,7 @@
         </div>
 
 
-        <div class="accordion-item">
+        <div class="accordion-item"  id="contact">
             <h2 class="accordion-header" id="flush-headingFive">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
                     <h5>Contact information</h5>
@@ -313,7 +310,7 @@
               text-align: center;
             }
           </style>
-        <div class="contact-box" id="contact">
+        <div class="contact-box">
             <h2 class="my-4"><i class="bi bi-chat-right-next"></i> Contact</h2>
             <form>
               <div class="form-group">

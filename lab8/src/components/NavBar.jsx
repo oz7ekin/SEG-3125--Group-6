@@ -41,8 +41,8 @@ export default function NavBar(props) {
         <Button variant="secondary" className="rounded-circle p-2 ms-5"><FontAwesomeIcon icon={cart} style={{ cursor: 'pointer' }} onClick={() => setModalShow1(true)} className="fs-2" />
         </Button>
       </Container>
-      <Button variant="link" style={{backgroundColor: 'white'}} >EN</Button>
-      <Button variant="link" style={{backgroundColor: 'white'}} >FR</Button>
+      {/* <Button variant="link" style={{backgroundColor: 'white'}} >EN</Button>
+      <Button variant="link" style={{backgroundColor: 'white'}} >FR</Button> */}
 
 
       <div className="me-3" id="google_translate_element"></div> 
