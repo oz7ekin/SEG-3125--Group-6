@@ -9,4 +9,4 @@ To view websites:
 -[Lab3](https://oz7ekin.github.io/lab3/index.html)
 -[Lab4](https://oz7ekin.github.io/lab4/index.html)
 -[Lab5](https://oz7ekin.github.io/lab5/index.html)
-
+-For Lab8 download the file and try npm start
