@@ -42,7 +42,7 @@ export default function NavBar(props) {
         </Button>
       </Container>
       <Button variant="link" style={{backgroundColor: 'white'}} >EN</Button>
-<Button variant="link" style={{backgroundColor: 'white'}} >FR</Button>
+      <Button variant="link" style={{backgroundColor: 'white'}} >FR</Button>
 
 
       <div className="me-3" id="google_translate_element"></div> 
