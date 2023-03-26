@@ -11,7 +11,22 @@ function LanguageProvider(props) {
    
     },
     fr: {
-      
+      "price": "prix",
+      "rating": "notation",
+      "quality": "qualité",
+      "colour": "couleur",
+      "search": "recherche",
+      "Lowest to Highest": "Du plus bas au plus élevé",
+      "Highest to Lowest": "Du plus élevé au plus bas",
+      "Any": "N'importe quel",
+      "Used - Like New": "D'occasion - Comme Neuf",
+      "Used - Good": "Occasion - Bon",
+      "Used - Acceptable": "Utilisé - Acceptable",
+      "Reset Fields": "Réinitialisation des champs",
+      "Phones": "Téléphone (s",
+      "Tablets": "Comprimés",
+      "Laptop": "Ordinateurs portables",
+      "Watches": "Montres"
     }
   };
 
