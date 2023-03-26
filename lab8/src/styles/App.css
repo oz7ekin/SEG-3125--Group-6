@@ -4,3 +4,10 @@
     font-weight: bold;
     color: #0c0b0b;
 }
+body {
+    background-image: url('/assets/logo-white.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  

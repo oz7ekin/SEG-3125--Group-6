@@ -16,9 +16,9 @@ function App() {
   const [ratingSortType, setRatingSortType] = useState("");
   const [categoryType, setCategoryType] = useState("");
   const [qualitySortType, setQualitySortType] = useState("");
-  const [modalShow, setModalShow] = React.useState(false); // information modal
+  const [modalShow, setModalShow] = React.useState(false); 
   const [searchQuery, setSearchQuery] = useState("");
-
+ 
   function itemInCart(id){
     for (let i = 0; i < cart.length; i++) {
       if (cart[i].id === id){
@@ -44,6 +44,8 @@ function App() {
     }
     setCart(tempCart);
   }
+
+  
 
   useEffect(() => {
     let sortedProducts = [...allProducts];

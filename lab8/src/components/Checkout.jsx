@@ -57,7 +57,7 @@ export default function Checkout(props) {
     setCountry("");
     props.handleClear([]);
     props.onHide();
-    alert("Thank you for shopping at iSellForLess! Please check your email for your order confirmation.");
+    alert("Thank you for shopping at Tech Shop 06 Please check your email for your order confirmation.");
     setStage(0);
   }
 
@@ -103,7 +103,7 @@ export default function Checkout(props) {
         </Modal.Header>
         <Modal.Body style={{ backgroundColor: '#CCCCCC' }}>
           {stage === 0 ? <Cart cart={props.cart} total={total} handleRemove={props.handleRemove} handleClear={props.handleClear} /> : stage === 1 ? <Information {...infoObj} /> : stage === 2 ? <Payment {...payObj} /> : stage === 3 ? <Shipping {...shipObj} /> : <Final {...infoObj} {...payObj} {...shipObj} total={total} />}
-          {showErrorMsg ? stage === 0 ? <div className="fw-bold text-danger mt-3"> Sorry, you must have at least one item to begin the checkout process! </div> : <span className="fw-bold text-danger"> Oops! There's been an error - make sure you fill in all required fields marked with *.</span> : <></>}
+          {showErrorMsg ? stage === 0 ? <div className="fw-bold text-danger mt-3"> NO ITEM IN THE CART </div> : <span className="fw-bold text-danger"> Oops! MAKE SURE YOU COMPLETE ALL THE PARTS *.</span> : <></>}
           <hr />
           {stage !== 0 ? <Button variant="dark" className="float-start" onClick={handleBack}>Back</Button> : <></>}
           {stage !== 4 ? <Button variant="dark" className="float-end" onClick={handleNext}>Next</Button> : <Button variant="success" className="float-end" onClick={handleConfirm}>Confirm Order</Button>}

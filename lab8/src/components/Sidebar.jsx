@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
 import { Button, Form } from "react-bootstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faArrowsAltV as arrows, faTags as price, faStarHalfAlt as rating, faAward as quality, faMobileAlt as phone, faTabletAlt as tablet, faLaptop as laptop } from '@fortawesome/free-solid-svg-icons';
-import {  faClock as watch } from '@fortawesome/free-regular-svg-icons';
+import {  faArrowsAltV as arrows, faTags as price, faStarHalfAlt as rating, faAward as quality, faMobileAlt as phone, faTabletAlt as tablet, faLaptop as laptop } from '@fortawesome/free-solid-svg-icons';
+import { faClock as watch } from '@fortawesome/free-regular-svg-icons';
+import { faDollarSign } from '@fortawesome/free-solid-svg-icons';
+
 
 export default function Sidebar(props) {
     const [priceRadio, setPriceRadio] = useState(null);
     const [ratingRadio, setRatingRadio] = useState(null);
     const [qualityRadio, setQualityRadio] = useState(null);
+    const [price, setPrice] = useState(faDollarSign);
+
 
     function handleReset(){
         props.setCategory("");
@@ -34,21 +38,22 @@ export default function Sidebar(props) {
                 <div className="py-2">
                     <div className="d-grid gap-2">
                        
-                        <Button className="rounded-pill p-0 fs-5" variant="light" onClick={() => { props.setCategory("Phone") }}>
+                        <Button className="rounded-pill p-0 fs-5" variant="light" onClick={() => { props.setCategory("iPhone") }}>
                             <FontAwesomeIcon className="me-1" icon={phone} /> Phones
                         </Button>
-                        <Button className="rounded-pill p-0 fs-5" variant="light" onClick={() => { props.setCategory("Tablet") }}>
+                        <Button className="rounded-pill p-0 fs-5" variant="light" onClick={() => { props.setCategory("iPad") }}>
                             <FontAwesomeIcon className="me-1" icon={tablet} /> Tablets
                         </Button>
-                        <Button className="rounded-pill p-0 fs-5" variant="light" onClick={() => { props.setCategory("Laptop") }}>
+                        <Button className="rounded-pill p-0 fs-5" variant="light" onClick={() => { props.setCategory("MacBook") }}>
                             <FontAwesomeIcon className="me-1" icon={laptop} /> Laptops
                         </Button>
-                        <Button className="rounded-pill p-0 fs-5" variant="light" onClick={() => { props.setCategory("Watch") }}>
-                            <FontAwesomeIcon className="me-1" icon={watch} /> Watchs
+                        <Button className="rounded-pill p-0 fs-5" variant="light" onClick={() => { props.setCategory("Apple Watch") }}>
+                            <FontAwesomeIcon className="me-1" icon={watch} /> Watches
                         </Button>
                     </div>
                 </div>
             </div>
+
             <div className="px-4">
                 <h2 className="fs-3 mb-3"><FontAwesomeIcon icon={arrows} /> Sort</h2>
                 <div className="ps-4 pb-2">
@@ -104,15 +109,16 @@ export default function Sidebar(props) {
                                 onClick={(e) => { props.sortByQuality("Acceptable"); setQualityRadio(e.target); }}
                             />
                         </div>
-
                     </Form>
-                    <div className="mb-3">
-                        <Button className="p-1" variant="secondary" onClick={handleReset}>Reset Fields</Button>
+                    <hr />
+                    <hr />
+                    <div>
+                    <Button className="p-1 bg-dark" variant="secondary" onClick={handleReset}>Reset Fields</Button>
                     </div>
-
                 </div>
-
             </div>
+            <hr />
+            <hr />
             <p className="text-center mt-5">© Designed by Group 6 SEG 3125. <a href="https://github.com/oz7ekin/oz7ekin.github.io" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
 
         </div>

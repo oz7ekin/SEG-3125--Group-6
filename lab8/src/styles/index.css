@@ -16,3 +16,9 @@ html, body {
   min-height: 100vh;
   background-color: #d9dde0;
 }
+body {
+  background-image: url('/assets/logo-white.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
